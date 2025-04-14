@@ -115,8 +115,8 @@ const Header = () => {
                 </li>               
                 <li className="nav-item">
                   <Link 
-                    to="/Works" 
-                    className={`nav-link ${isActive("/Works")}`}
+                    to="/Products" 
+                    className={`nav-link ${isActive("/Products")}`}
                     onClick={handleNavLinkClick}
                   >
                     Products

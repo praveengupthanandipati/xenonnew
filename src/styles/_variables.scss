@@ -33,7 +33,7 @@ $breakpoints: (
     .bg-#{$color-name} {
       background-color: $color-value;
     }
-    .text-#{$color-name} {
+    .font-#{$color-name} {
       color: $color-value;
     }
     .border-#{$color-name} {

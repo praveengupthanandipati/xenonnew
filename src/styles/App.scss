@@ -1,15 +1,67 @@
 @use "sass:map";
 @use "sass:color";
 @use "./mixins" as m;
+@use "./mixins" as *;
 @use "./variables" as v;
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;600;700&display=swap");
-@import "./icomoon";
+@import "./icomoon.css";
 
 body{
     @include m.siteMain;
 }
 
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 { 
+  color: map.get(v.$colors, "green");
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.8rem;
+}
+
+.link {
+    background: transparent;
+    padding: 10px 25px;    
+    @include m.transition(all 0.5s ease);
+    display: inline-block;
+  }
+
+  .green-btn {
+    @extend .link;
+    background-color: map.get(v.$colors, "primary");
+    color: map.get(v.$colors, "white");
+  
+    &:hover {
+    //   background-color: darken(map.get(v.$colors, "primary"), 20%);
+    background:color.adjust(map.get(v.$colors, "primary"), $lightness:20%);
+      color: map.get(v.$colors, "white");
+    }
+  }
+
+  .blue-btn {
+    @extend .link;
+    background-color: map.get(v.$colors, "secondary");
+    color: map.get(v.$colors, "white");
+  
+    &:hover {
+      background:color.adjust(map.get(v.$colors, "secondary"), $lightness:20%);
+    }
+  }
+  
+  
+
 header{
+    background:map.get(v.$colors, "white");
     .nav-item{       
         padding:10px 20px;
         color:map.get(v.$colors, "black");
@@ -22,3 +74,555 @@ header{
         }
     }
 }
+
+.scrolledHeader{
+    @include m.shadow(0px, 2px, 4px, #ccc, 0.5);
+}
+
+main{
+    padding-top:75px;
+}
+
+.HomeSlider {
+    background: linear-gradient(180deg, #ffebfb 0%, #f6ffe5 47.32%);
+  
+    .container-fluid {
+      background: url(../assets/images/aboutbg-pattern.png) no-repeat bottom left;
+    }
+  
+    position: relative;
+    .article-slider {
+      h2 {
+        font-size: clamp(1.2rem, 3vw, 3rem);
+        line-height: 120%;
+  
+        @include respond-below(map.get(v.$breakpoints, "md")) {
+          line-height: 150%;
+        }
+  
+        span {
+          background: linear-gradient(90deg, #1468b3 0%, #89bb2f 100%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      p {
+        font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+      }
+    }
+    .swiper {
+      width: 100%;
+      position: relative;
+  
+      @include respond-below(map.get(v.$breakpoints, "xl")) {
+        height: auto;
+      }
+      @include respond-below(map.get(v.$breakpoints, "md")) {
+        margin-top: 55px;
+      }
+      .swiper-slide {
+        position: relative;
+        .bannerimage {
+          .bannerimg {
+            width: 100%;
+          }
+        }
+  
+        article {
+          h2 {
+            font-size: clamp(1.2rem, 2.5vw, 2.5rem);
+            color: map.get(v.$colors, "black");
+          }
+          p {
+            @include respond-below(map.get(v.$breakpoints, "sm")) {
+              line-height: 150%;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination-bullet {
+      background: map.get(v.$colors, "white");
+    }
+  }
+
+  .highlets {
+    width: 100%;
+    padding-top: 2.5rem;
+  
+    @include respond-below(map.get(v.$breakpoints, "md")) {
+      padding-top: 0;
+    }
+    .highlets-col {
+      .h5 {
+        font-size: 15px;
+        line-height: 20px;
+      }
+      @include respond-below(map.get(v.$breakpoints, "lg")) {
+        margin-bottom: 15px;
+      }
+      .icon {
+        .icomoon {
+          font-size: clamp(1.2rem, 2vw, 2rem);
+          color: map.get(v.$colors, "primary");
+        }
+      }
+    }
+  }
+
+
+  .Homeabout {
+    background: url(../assets/images/aboutbg-pattern.png) no-repeat 0 0;
+  
+    .aboutImage {
+      text-align: right;
+      position: relative;
+  
+      &:before {
+        content: "";
+        width: 85%;
+        height: 85%;
+        background: map.get(v.$colors, "primary");
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        z-index: 0;
+        border-bottom-right-radius: 90%;
+      }
+  
+      img {
+        border-bottom-right-radius: 75%;
+        position: relative;
+        z-index: 10;
+      }
+    }
+    .company-highletscol {
+      padding: 50px 0;
+      color: map.get(v.$colors, "black");
+  
+      @include respond-below(map.get(v.$breakpoints, "sm")) {
+        padding: 15px 0;
+      }
+  
+      .col-4 {
+        border-right-color: map.get(v.$colors, "black");
+  
+        h3 {
+          font-size: clamp(1.5rem, 3vw, 3rem);
+        }
+        p {
+          font-size: clamp(0.8rem, 1vw, 1rem);
+        }
+      }
+    }
+  }
+
+
+  .HomeProducts {
+    padding: 50px 0;
+  
+    @include respond-below(map.get(v.$breakpoints, "md")) {
+      padding: 20px 0;
+    }
+  
+    .swiper {
+      padding: 10px 0 40px 0;
+    }
+  
+    .HomePorudctitem {
+      padding: 10px;
+      border-radius: 15px;      
+      background: map.get(v.$colors, "white");
+      height: 410px;
+      @include respond-below(map.get(v.$breakpoints, "lg")) {
+        height: auto;
+      }
+      figure {
+        background: map.get(v.$colors, white);
+        padding: 10px;
+        border-radius: 15px;
+        border: 1px solid map.get(v.$colors, "lightgray");
+        height: 280px;
+  
+        @include respond-below(map.get(v.$breakpoints, "lg")) {
+          height: auto;
+        }
+      }
+      article {
+        h6 {
+          padding: 7px 0;
+          border: 1px dashed map.get(v.$colors, primary);
+          font-size: clamp(1rem, 0.9vw, 0.9rem);
+        }
+        p {
+          font-size: clamp(0.7rem, 0.9vw, 0.9rem);
+        }
+      }
+    }
+  }
+  
+
+  .homeWhyChooseus {
+    background: linear-gradient(90deg, #f7ffe8 0.17%, #d6f4ff 99.82%);
+    padding: 50px 0;
+    @include respond-below(map.get(v.$breakpoints, "sm")) {
+      padding: 20px 0;
+    }
+    .whychooseusimg {
+      border-bottom-left-radius: 50%;
+      width: 100%;
+    }
+    .whycol {
+      margin-bottom: 25px;
+      position: relative;
+      left: -70px;
+      @include respond-below(map.get(v.$breakpoints, "md")) {
+        margin-bottom: 10px;
+        left: 0;
+      }
+      .icon {
+        background: map.get(v.$colors, "primary");
+        min-width: 85px;
+        max-width: 85px;
+        min-height: 85px;
+        max-height: 85px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+  
+        .icomoon {
+          font-size: clamp(1.5rem, 2vw, 2rem);
+          color: map.get(v.$colors, "white");
+        }
+      }
+  
+      h5 {
+        font-size: clamp(1rem, 1.2vw, 1.2rem);
+        color: map.get(v.$colors, "black");
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+      }
+    }
+  }
+
+  footer {
+    font-size: v.$fsize;
+    position: relative;
+    margin-top: 50px;
+    @include respond-below(map.get(v.$breakpoints, "md")) {
+      padding-top: 20px;
+      margin-top: 0;
+    }    
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(104, 183, 249, 0.2) 31.3%,
+      rgba(176, 248, 200, 0.2) 100.2%
+    );
+    padding: 50px 0 0 0;  
+    .footer-col-title {
+      font-size: clamp(1.1rem, 1.2vw, 1.2rem);
+      padding-bottom: 15px;
+  
+      @include respond-below(map.get(v.$breakpoints, "md")) {
+        padding-bottom: 5px;
+      }
+    }
+    a {
+      color: map.get(v.$colors, "black");
+      margin-bottom: 10px;
+      display: inline-block;
+      text-decoration: underline;
+  
+      &:hover {
+        color: map.get(v.$colors, "primary");
+      }
+    }
+    .contacts {
+      li {
+        margin-bottom: 20px;
+      }
+    }
+    .social {
+      a {
+        font-size: v.$fsize + 5;
+        margin-right: 10px;
+        padding: 5px;
+        text-decoration: none;
+      }
+    }
+    .bottomFooter {
+      margin-top: 25px;
+      background:map.get(v.$colors, "primary")
+    }
+    .scroll-to-top {
+      right: 0;
+      bottom: 50px;
+      position: fixed;
+      z-index: 999;
+  
+      a {
+        width: 50px;
+        height: 50px;
+        background: map.get(v.$colors, "white");
+        text-align: center;
+        border-radius: 50%;
+        line-height: 150%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include m.shadow(2px, 2px, 4px, #ccc, 0.5);
+        text-decoration: none;
+  
+        .icomoon {
+          font-size: clamp(2rem, 2.5vw, 2.5rem);
+        }
+      }
+    }
+  }
+
+
+
+  .subPage {
+    .subPageHeader {
+      background: url(../assets/images/subpage-header-bg.jpg) no-repeat 0 0;
+      background-size: cover;
+      padding: 100px 0;
+      color: map.get(v.$colors, "white");
+      @include respond-below(map.get(v.$breakpoints, "md")) {
+        padding: 75px 0 25px 0;
+      }
+  
+      .h1 {
+        font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .breadcrumb-item {
+      color: map.get(v.$colors, "black");
+      font-size: v.$fsize - 1;
+      &:before {
+        content: "\e90f" !important;
+        font-family: "icomoon" !important;
+      }
+  
+      &:first-child {
+        &:before {
+          content: " ";
+          display: none;
+        }
+      }
+    }
+  
+    .breadcrumb-item.active {
+      color: map.get(v.$colors, "black");
+      font-size: v.$fsize - 1;
+      &:before {
+        content: "\e90f" !important;
+        font-family: "icomoon" !important;
+      }
+    }
+    .subPageMain {
+      min-height: 500px;
+      .h2 {
+        position: relative;
+        &:before {
+          content: "";
+          width: 50px;
+          height: 3px;
+          background: map.get(v.$colors, "primary");
+          position: absolute;
+          left: 0;
+          top: -10px;
+        }
+      }
+      .pageContainer {
+        padding: 50px 0;
+  
+        @include respond-below(map.get(v.$breakpoints, "md")) {
+          padding: 20px 0;
+        }
+  
+        .h5 {
+          line-height: 30px;
+        }
+      }
+      .list-items {
+        padding-left: 20px;
+        li {
+          font-size: clamp(0.85rem, 1vw, 1rem);
+          line-height: 150%;
+          position: relative;
+          list-style-type: disc;
+          list-style-position: outside;
+          padding-bottom: 10px;
+  
+          @include respond-below(map.get(v.$breakpoints, "md")) {
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .experience-div {
+    background: map.get(v.$colors, "primary");
+    width: 75%;
+    margin: -100px auto 0 auto;
+    padding: 50px 0;
+    text-align: center;
+  
+    .count {
+      font-size: clamp(3rem, 8vw, 8rem);
+      color: map.get(v.$colors, "white");
+      line-height: 7rem;
+    }
+  }
+  
+  .contactForm {
+    .form-control {
+      padding: 12px;
+      background: map.get(v.$colors, "lightgray");
+      border-radius: 0;
+      border: none;
+  
+      &:focus {
+        outline: 1px solid map.get(v.$colors, "lightprimary");
+        box-shadow: none;
+      }
+      &::placeholder {
+        font-size: v.$fsize - 1;
+      }
+    }
+  }
+  
+  .nav-pills {
+    .nav-item {
+      @include respond-below(map.get(v.$breakpoints, "sm")) {
+        width: 100%;
+      }
+    }
+    .nav-link.active {
+      background: map.get(v.$colors, "secondary");
+    }
+    .nav-link {
+      background: lighten(map.get(v.$colors, "secondary"), 75%);
+      margin-right: 5px;
+      color: map.get(v.$colors, "black");
+  
+      @include respond-below(map.get(v.$breakpoints, "sm")) {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  
+  .table-responsive {
+    margin-top: 25px;
+    table {
+      thead {
+        tr {
+          th {
+            background: map.get(v.$colors, "primary");
+            color: map.get(v.$colors, "white");
+            font-size: v.$fsize - 1;
+            padding: 12px;
+            vertical-align: middle;
+          }
+        }
+      }
+      td {
+        border-style: dashed;
+        border-bottom: 1px dashed lighten(map.get(v.$colors, "gray"), 30%);
+        font-size: v.$fsize - 1;
+        padding: 12px;
+  
+        a {
+          color: map.get(v.$colors, "black");
+  
+          &:hover {
+            text-decoration: underline;
+            color: map.get(v.$colors, "primary");
+          }
+        }
+      }
+    }
+  }
+  
+  .product-desc-item {   
+    margin: 0 0 35px 0;
+    
+    p {
+      font-size: v.$fsize - 3 !important;
+      letter-spacing: 1px;
+      margin-bottom: 2px;
+      color: lighten(map.get(v.$colors, "black"), 50%);
+  
+      &:before {
+        content: "";
+        width: 25px;
+        height: 2px;
+        background: map.get(v.$colors, "primary");
+        position: absolute;
+        top: -3px;
+        left: 0;
+      }
+    }
+    .h6 {
+      font-size: v.$fsize + 2;
+      word-wrap: break-word;
+    }
+  }
+  
+  .ProductEnquiryform {
+    background: lighten(map.get(v.$colors, "primary"), 50%);
+  
+    form {
+      .form-group {
+        .form-label {
+          font-size: v.$fsize - 3;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-bottom: 3px;
+          padding-bottom: 0;
+        }
+        .form-control,
+        .form-select {
+          border-radius: 0;
+          border: none;
+          padding: 12px;
+          font-size: v.$fsize - 1;
+          border: 1px solid lighten(map.get(v.$colors, "primary"), 50%);
+          &:focus {
+            box-shadow: none;
+            border: 1px solid map.get(v.$colors, "primary");
+          }
+        }
+      }
+      textarea {
+        height: 120px;
+      }
+    }
+  }
+  
+  .loading {
+    position: fixed;
+    background: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    p {
+      color: map.get(v.$colors, "white");
+    }
+  }
