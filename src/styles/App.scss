@@ -1,0 +1,24 @@
+@use "sass:map";
+@use "sass:color";
+@use "./mixins" as m;
+@use "./variables" as v;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;600;700&display=swap");
+@import "./icomoon";
+
+body{
+    @include m.siteMain;
+}
+
+header{
+    .nav-item{       
+        padding:10px 20px;
+        color:map.get(v.$colors, "black");
+
+        .nav-link{
+            color:map.get(v.$colors, "black");
+        }
+        .nav-link.active{
+            color:map.get(v.$colors, "primary");
+        }
+    }
+}

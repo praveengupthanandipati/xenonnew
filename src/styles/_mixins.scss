@@ -1,0 +1,73 @@
+
+@use "sass:map";
+@use "./variables" as v;
+
+@mixin siteMain {
+    -webkit-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;    
+    font-family: "Noto Sans", sans-serif;    
+  }
+
+  @mixin transition($property: null, $duration: null, $function: null) {
+    transition: $property $duration $function;
+    -moz-transition: $property $duration $function;
+    -webkit-transition: $property $duration $function;
+    -ms-transition: $property $duration $function;
+    -o-transition: $property $duration $function;
+  }
+
+  @mixin translate($x: 0, $y: 0) {
+    transform: translate($x, $y);
+    -webkit-transform: translate($x, $y); // Safari and older browsers
+    -moz-transform: translate($x, $y); // Firefox
+    -ms-transform: translate($x, $y); // IE 9
+    -o-transform: translate($x, $y); // Opera
+  }
+
+  @mixin rotate($deg: 0) {
+    transform: rotate(#{$deg}deg);
+    -webkit-transform: rotate(#{$deg}deg);
+    -moz-transform: rotate(#{$deg}deg);
+    -ms-transform: rotate(#{$deg}deg);
+    -o-transform: rotate(#{$deg}deg);
+  }
+
+  //Mixin for shadow
+@mixin shadow($top, $left, $blur, $color, $opacity) {
+    box-shadow: $top $left $blur rgba($color, $opacity);
+  }
+
+  /**
+Usage Transition
+.element {
+  @include shadow(color, 0.5s, linear);
+}
+**/
+
+
+  //Mixin for Responsive Breakpoints
+
+//Mixin for min-width and max-width
+@mixin respond-between($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+  
+  //Mixin for min-width
+  @mixin respond-above($min) {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+  
+  //Mixin for max-width
+  @mixin respond-below($max) {
+    @media (max-width: $max) {
+      @content;
+    }
+  }

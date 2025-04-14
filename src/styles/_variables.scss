@@ -1,0 +1,59 @@
+@use "sass:map"; //Other variables
+$fsize: 15px;
+
+
+//variables
+$colors: (
+  "black": #000,
+  "white": #fff,
+  "red": #aa0607,
+  "gray": #828282,
+  "primary": #7cb418,
+  "secondary": #02006d,
+  "lightprimary": #f9e6f0,
+  "lightgray": #e7eefa,
+  "lightgradient": (
+    linear-gradient(270deg, #e9defa 0%, rgba(251, 252, 219, 0.5) 100%),
+  ),
+);
+
+
+//devices breakpoints
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+//loop colours
+@each $color-name, $color-value in $colors {
+    .bg-#{$color-name} {
+      background-color: $color-value;
+    }
+    .text-#{$color-name} {
+      color: $color-value;
+    }
+    .border-#{$color-name} {
+      border: 1px solid $color-value;
+    }
+  }
+
+
+//font weights
+//Font Weights Map
+$font-weights: (
+  "light": 200,
+  "regular": 400,
+  "semibold": 600,
+  "bold": 700,
+);
+
+//Loop $weight-name, $weight-value in $font-weights
+@each $weight-name, $weight-value in $font-weights {
+    .font-#{$weight-name} {
+      font-weight: $weight-value;
+    }
+  }
