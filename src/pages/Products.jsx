@@ -171,15 +171,34 @@ const Products = () => {
                   aria-labelledby="pills-Synthetic-analogs-of-Lead-tab"
                 >
                   <div className="row">
-                    <div className="col-md-6">
-                      <NavLink
-                        className="green-btn"
-                        to={phytochemicalsPdf}
-                        target="_blank"
-                      >
-                        Download List of Phytochemicals with structure
-                        activities
-                      </NavLink>
+                    <div className="col-md-12">
+
+                    <div className="table-responsive">
+                      <table className="table table-hover">
+                          <tr>
+                              <td>Download List of Phytochemicals</td>
+                              <td>
+                               <NavLink 
+                                  className="link-primary"
+                                  to={phytochemicalsPdf}
+                                  target="_blank">
+                                    <i class="bi bi-download"></i> Download
+                                </NavLink>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>Download List of Phytochemicals with Structure and Functional Activity</td>
+                              <td>
+                               <NavLink 
+                                  className="link-primary"
+                                  to={phytochemicalsPdf}
+                                  target="_blank">
+                                    <i class="bi bi-download"></i> Download
+                                </NavLink>
+                              </td>
+                          </tr>
+                        </table>
+                      </div>                    
                     </div>
                   </div>
                 </div>

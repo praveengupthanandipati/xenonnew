@@ -546,14 +546,7 @@ main{
         font-size: v.$fsize - 1;
         padding: 12px;
   
-        a {
-          color: map.get(v.$colors, "black");
-  
-          &:hover {
-            text-decoration: underline;
-            color: map.get(v.$colors, "primary");
-          }
-        }
+       
       }
     }
   }
