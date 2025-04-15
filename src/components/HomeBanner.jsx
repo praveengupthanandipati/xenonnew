@@ -46,7 +46,7 @@ const HomeBanner = () => {
   return (
     <div>
        <div className="HomeSlider">
-        <div className="container-fluid g-0">
+        <div className="container-fluid g-md-0">
           <div className="row g-0 justify-content-between">
             <div className="col-md-7 align-self-center">
               <article className="article-slider">

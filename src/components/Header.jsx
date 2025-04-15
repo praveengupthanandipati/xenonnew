@@ -73,7 +73,7 @@ const Header = () => {
             data-bs-target="#offcanvasNavbar2"
             aria-controls="offcanvasNavbar2"
           >
-            <span className="navbar-toggler-icon"><i className="bi bi-list"></i></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
           <div
             className="offcanvas offcanvas-end text-bg-dark"

@@ -73,6 +73,27 @@ header{
             color:map.get(v.$colors, "primary");
         }
     }
+    .navbar-toggler{
+      background-color:map.get(v.$colors, "primary")
+    }
+    .offcanvas-body{
+      .nav-item{
+         @include respond-below(map.get(v.$breakpoints, "lg")){
+          background:lighten(map.get(v.$colors, "black"), 20%);
+          margin-bottom:10px;
+         }
+         .nav-link{
+          @include respond-below(map.get(v.$breakpoints, "lg")){
+            color:map.get(v.$colors, "white");
+          }
+         }
+         .nav-link.active{
+          @include respond-below(map.get(v.$breakpoints, "lg")){
+            color:map.get(v.$colors, "primary");
+          }
+         }
+      }
+    }
 }
 
 .scrolledHeader{
@@ -396,7 +417,7 @@ main{
       padding: 100px 0;
       color: map.get(v.$colors, "white");
       @include respond-below(map.get(v.$breakpoints, "md")) {
-        padding: 75px 0 25px 0;
+        padding: 25px 0;
       }
   
       .h1 {
