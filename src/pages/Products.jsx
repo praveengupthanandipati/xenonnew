@@ -1,7 +1,8 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, Link } from 'react-router-dom';
 import phytochemicals from "../data/Phytochemicals_data";
 import phytochemicalsPdf from "../assets/files/xenonbiosciences-future-products.pdf";
+import futureproductswithstructuresandactivity from "../assets/files/Futureproductswithstructuresandactivitynew.pdf";
 
 const Products = () => {
     const pageTitle = "Phytochemicals Reference Standards";
@@ -112,12 +113,12 @@ const Products = () => {
                         {inStockItems.map((item, index) => (
                           <tr key={index}>
                             <td width="40%">
-                              <a
-                                href=""
+                              <NavLink
+                                to=" "
                                 onClick={() => handleTabClick(item.id, "all")}
                               >
                                 {item.Product}
-                              </a>
+                              </NavLink>
                             </td>
                             <td width="30%">{item.BotanicalSource}</td>
                             <td width="30%">{item.CASNumber}</td>
@@ -148,12 +149,12 @@ const Products = () => {
                         {underProcessing.map((item, index) => (
                           <tr key={index}>
                             <td width="40%">
-                              <a
-                                href=""
+                              <NavLink
+                                to=" "
                                 onClick={() => handleTabClick(item.id, "lead")}
                               >
                                 {item.Product}
-                              </a>
+                              </NavLink>
                             </td>
                             <td width="30%">{item.BotanicalSource}</td>
                             <td width="30%">{item.CASNumber}</td>
@@ -175,6 +176,13 @@ const Products = () => {
 
                     <div className="table-responsive">
                       <table className="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Name of Future Document</th>
+                          <th scope="col">Download</th>                         
+                        </tr>
+                      </thead>
+                        <tbody>
                           <tr>
                               <td>Download List of Phytochemicals</td>
                               <td>
@@ -191,12 +199,13 @@ const Products = () => {
                               <td>
                                <NavLink 
                                   className="link-primary"
-                                  to={phytochemicalsPdf}
+                                  to={futureproductswithstructuresandactivity}
                                   target="_blank">
                                     <i class="bi bi-download"></i> Download
                                 </NavLink>
                               </td>
                           </tr>
+                          </tbody>
                         </table>
                       </div>                    
                     </div>

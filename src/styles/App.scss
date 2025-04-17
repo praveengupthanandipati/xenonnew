@@ -78,8 +78,8 @@ header{
     }
     .offcanvas-body{
       .nav-item{
-         @include respond-below(map.get(v.$breakpoints, "lg")){
-          background:lighten(map.get(v.$colors, "black"), 20%);
+         @include respond-below(map.get(v.$breakpoints, "lg")){        
+          background:color.adjust(map.get(v.$colors, "black"), $lightness: 20%);          
           margin-bottom:10px;
          }
          .nav-link{
@@ -535,8 +535,8 @@ main{
     .nav-link.active {
       background: map.get(v.$colors, "secondary");
     }
-    .nav-link {
-      background: lighten(map.get(v.$colors, "secondary"), 75%);
+    .nav-link {      
+      background:color.adjust(map.get(v.$colors, "secondary"), $lightness: 75%);          
       margin-right: 5px;
       color: map.get(v.$colors, "black");
   
@@ -563,7 +563,7 @@ main{
       }
       td {
         border-style: dashed;
-        border-bottom: 1px dashed lighten(map.get(v.$colors, "gray"), 30%);
+        border-bottom: 1px dashed color.adjust(map.get(v.$colors, "gray"), $lightness: 30%);
         font-size: v.$fsize - 1;
         padding: 12px;
   
@@ -579,7 +579,7 @@ main{
       font-size: v.$fsize - 3 !important;
       letter-spacing: 1px;
       margin-bottom: 2px;
-      color: lighten(map.get(v.$colors, "black"), 50%);
+      color: color.adjust(map.get(v.$colors, "black"), $lightness: 50%);
   
       &:before {
         content: "";
@@ -598,7 +598,7 @@ main{
   }
   
   .ProductEnquiryform {
-    background: lighten(map.get(v.$colors, "primary"), 50%);
+    background: color.adjust(map.get(v.$colors, "primary"), $lightness: 50%);
   
     form {
       .form-group {
@@ -615,7 +615,7 @@ main{
           border: none;
           padding: 12px;
           font-size: v.$fsize - 1;
-          border: 1px solid lighten(map.get(v.$colors, "primary"), 50%);
+          border: 1px solid color.adjust(map.get(v.$colors, "primary"), $lightness: 50%);
           &:focus {
             box-shadow: none;
             border: 1px solid map.get(v.$colors, "primary");

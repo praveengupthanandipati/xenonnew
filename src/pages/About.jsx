@@ -25,11 +25,11 @@ const About = () => {
         <div className="subPageMain">
           <div className="container">
             <nav aria-label="breadcrumb">
-              <ol class="breadcrumb my-2">
-                <li class="breadcrumb-item">
+              <ol className="breadcrumb my-2">
+                <li className="breadcrumb-item">
                   <NavLink to="/">Home</NavLink>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item active" aria-current="page">
                   {pageTitle}
                 </li>
               </ol>
