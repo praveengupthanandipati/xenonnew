@@ -10,6 +10,7 @@ const Products = () => {
     const navigate = useNavigate();
 
     //on click on product redirecting to poroduct detail  based on ID ID
+    
     const handleTabClick = (id, type) => {
       localStorage.setItem("id", id);
       // scrollToTop(0, 0);

@@ -2734,7 +2734,7 @@ const phytochemicals = [
   },
   {
     id: 113,
-    Image: "/products/Bergapten-484-20-8.jpg",
+    Image: "/products/Bergapten-484-20-8.png",
     Product: "Bergapten (5-Methoxypsoralen)",
     BotanicalSource: "Ammi majus",
     IUPACName: "4-methoxyfuro[3,2-g]chromen-7-one",
@@ -2756,7 +2756,7 @@ const phytochemicals = [
   },
   {
     id: 114,
-    Image: "/products/Bergaptol-486-60-2.jpg",
+    Image: "/products/Bergaptol-486-60-2.png",
     Product: "Bergaptol (5-Hydroxypsoralen)",
     BotanicalSource: "Ammi majus",
     IUPACName: "4-Hydroxy7H-furo[3,2-g][1]benzopyran-7-one",
@@ -2778,7 +2778,7 @@ const phytochemicals = [
   },
   {
     id: 115,
-    Image: "/products/Methoxsalen-298-81-7.jpg",
+    Image: "/products/Methoxsalen-298-81-7.png",
     Product: "Methoxsalen (xanthotoxin)",
     BotanicalSource: "Ammi majus",
     IUPACName: "9-methoxyfuro[3,2-g]chromen-7-one",
@@ -2800,7 +2800,7 @@ const phytochemicals = [
   },
   {
     id: 116,
-    Image: "/products/Xanthotoxol-2009-24-7.jpg",
+    Image: "/products/Xanthotoxol-2009-24-7.png",
     Product: "Xanthotoxol (8-Hydroxypsoralen)",
     BotanicalSource: "Ammi majus",
     IUPACName: "9-hydroxy-7h-furo(3,2-g)(1)benzopyran-7-one",

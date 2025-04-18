@@ -287,8 +287,7 @@ const ProductDetail = memo(() => {
                   role="tabpanel"
                   aria-labelledby="pills-SpectrualData-tab"
                 >
-                  SpectrualData Not Available Currently, We will get back
-                  soon
+                  CoA and Spectral data available upon request                 
                 </div>
               </div>
             </div>
