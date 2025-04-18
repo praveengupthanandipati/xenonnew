@@ -1,6 +1,14 @@
+//GSAP
+import gsap from 'gsap';
+import {useGSAP} from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+//react
 import React, {useRef, useState} from 'react';
 import { NavLink } from 'react-router-dom';
-import {Swiper, SwiperSlide} from "swiper/react";
+
+//import Swiper properties
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 import Banner01 from "../assets/images/banner01.jpg";
 import Banner02 from "../assets/images/banner02.jpg";
@@ -13,6 +21,73 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const HomeBanner = () => {
+
+  //GSAP Animation
+  useGSAP(()=>{
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Create a timeline for coordinated animations
+    const tl = gsap.timeline();
+
+    // Enhanced h2 animation with split text effect
+    const h2Text = document.querySelector('.article-slider h2');
+    if (h2Text) {
+      const words = h2Text.textContent.split(' ');
+      const originalClasses = h2Text.className;
+      h2Text.innerHTML = '';
+      
+      words.forEach((word) => {
+        const span = document.createElement('span');
+        if (word.trim() === 'Phytochemicals') {
+          span.className = 'text-gra';
+        }
+        span.textContent = word + ' ';
+        h2Text.appendChild(span);
+      });
+      h2Text.className = originalClasses;
+    }
+
+    tl.from('.article-slider h2 span', {
+      opacity: 0,
+      y: 100,
+      rotateX: -90,
+      stagger: 0.1,
+      duration: 1.2,
+      ease: "back.out(1.7)",
+    })
+
+    tl.from('.article-slider p', {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out'
+    }, "-=0.5") 
+
+    tl.from('.article-slider-btn', {
+      scale: 0,
+      opacity: 0,
+      duration: 0.8,
+      ease: 'elastic.out(1, 0.3)'
+    }, "-=0.3")
+
+    // Modified highlets-col animation
+    gsap.from('.highlets-col', {
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.highlets',
+        start: 'top bottom-=100',
+        end: 'bottom center',
+        toggleActions: 'play none none reverse',
+        once: false
+      }
+    });
+
+  });
+
     const homeSliderItems = [
         {
           id: 1,
@@ -52,20 +127,20 @@ const HomeBanner = () => {
               <article className="article-slider">
                 <div className="row justify-content-end">
                   <div className="col-md-9 col-sm-10">
-                    <article className="p-2 p-md-4">
+                    <article className="p-2 p-md-4 mt-4 mt-md-0">
                       <h2 className="font-bold">
-                        Your Strategic Partner for <span>Phytochemicals </span>{" "}
+                        Your Strategic Partner for <span className='text-gra'>Phytochemicals</span>{" "}
                         Reference Standards
                       </h2>
                       <p className="d-none d-md-block">
                         Embark on a fascinating journey into the heart of
                         phytochemicals with our captivating exploration.
-                      </p>
-                      <div>
+                      </p>  
+                      <div className="article-slider-btn">
                         <NavLink to="/About" className="green-btn">
                           Read More
-                        </NavLink>
-                      </div>
+                        </NavLink>       
+                        </div>                                   
                     </article>
                     <section className="highlets my-2 my-md-5 d-none d-md-block">
                       <div className="row">

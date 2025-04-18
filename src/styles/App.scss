@@ -3,7 +3,8 @@
 @use "./mixins" as m;
 @use "./mixins" as *;
 @use "./variables" as v;
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;600;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
 @import "./icomoon.css";
 
 body{
@@ -20,6 +21,7 @@ li {
 h1 { 
   color: map.get(v.$colors, "green");
 }
+
 
 a {
   text-decoration: none;
@@ -114,22 +116,22 @@ main{
     position: relative;
     .article-slider {
       h2 {
-        font-size: clamp(1.2rem, 3vw, 3rem);
-        line-height: 120%;
+        font-size: clamp(1.2rem, 2.8vw, 2.8rem);
+        line-height: 130%;
   
         @include respond-below(map.get(v.$breakpoints, "md")) {
           line-height: 150%;
         }
   
-        span {
+        span.text-gra {
           background: linear-gradient(90deg, #1468b3 0%, #89bb2f 100%);
-          background-clip: text;
           -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;        
         }
       }
       p {
-        font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+        font-size: clamp(0.8rem, 1.1vw, 1.1rem);
       }
     }
     .swiper {

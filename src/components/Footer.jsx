@@ -96,7 +96,7 @@ const Footer = () => {
     </div>
     <div className="bottomFooter py-3">
       <p className="text-center pb-0 mb-0 font-white">
-        All Copy rights Reserved @ New Horizon Biosciences 2024
+        All Copy rights Reserved @ Xenon Biosciences 2025
       </p>
     </div>
   </footer>

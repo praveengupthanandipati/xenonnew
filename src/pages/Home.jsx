@@ -1,4 +1,7 @@
 import React from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { NavLink } from 'react-router-dom';
 import HomeBanner from '../components/HomeBanner';
 import AboutImage from "../assets/images/xenon-about-home.jpg";
@@ -24,6 +27,92 @@ const Home = () => {
       ];
       let whychooseusTitleTop = "Why Chooseus";
       let whychooseusTitle = "Phytochem Experts: Choose Excellence";
+
+    // GSAP Animations
+    useGSAP(() => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // About section title animations
+      gsap.from('.sectionTitle h6', {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.sectionTitle',
+          start: 'top center+=100',
+          toggleActions: 'play none none reverse'
+        }
+      });
+
+      gsap.from('.sectionTitle h3', {
+        y: -100,
+        opacity: 0,
+        duration: 1,
+        delay: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.sectionTitle',
+          start: 'top center+=100',
+          toggleActions: 'play none none reverse'
+        }
+      });
+
+      // About section paragraph animations
+      gsap.from('.Homeabout p', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.Homeabout',
+          start: 'top center+=100',
+          toggleActions: 'play none none reverse'
+        }
+      });
+
+      // About image animation
+      gsap.from('.aboutImage', {
+        scale: 0.8,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.aboutImage',
+          start: 'top center+=100',
+          toggleActions: 'play none none reverse'
+        }
+      });
+
+      // Read more button animation
+      gsap.from('.green-btn', {
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.green-btn',
+          start: 'top center+=100',
+          toggleActions: 'play none none reverse'
+        }
+      });
+
+      // Why Choose Us section animations
+      gsap.from('.whycol', {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '.homeWhyChooseus',
+          start: 'top center+=100',
+          toggleActions: 'play none none reverse'
+        }
+      });
+    });
+
   return (
     <main>
         <HomeBanner />
