@@ -1,9 +1,6 @@
 import React, {useState, useRef} from 'react';
 import { NavLink } from 'react-router-dom';
 import emailjs from "@emailjs/browser";
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Contact = () => {
   const pageTitle = "Contact";
@@ -18,73 +15,6 @@ const Contact = () => {
   const [description, setDescription] = useState("");
   const form = useRef();
   const [statusMessage, setStatusMessage] = useState(null);
-
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Header animations
-    gsap.from('h1', {
-      y: -50,
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out'
-    });
-
-    gsap.from('.subPageHeader p', {
-      y: 30,
-      opacity: 0,
-      duration: 1,
-      delay: 0.3,
-      ease: 'power3.out'
-    });
-
-    // Breadcrumb animation
-    gsap.from('.breadcrumb-item', {
-      x: -30,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: 'power3.out'
-    });
-
-    // Form title animation
-    gsap.from('h2', {
-      x: -50,
-      opacity: 0,
-      duration: 1,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: 'h2',
-        start: 'top center+=100'
-      }
-    });
-
-    // Form fields animation
-    gsap.from('.form-control', {
-      y: 30,
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.1,
-      ease: 'power3.out',
-      scrollTrigger: {
-        trigger: '.contactForm',
-        start: 'top center+=100'
-      }
-    });
-
-    // Submit button animation
-    gsap.from('.blue-btn', {
-      scale: 0.8,
-      opacity: 0,
-      duration: 1,
-      ease: 'back.out(1.7)',
-      scrollTrigger: {
-        trigger: '.blue-btn',
-        start: 'top center+=100'
-      }
-    });
-
-  });
 
   const validateForm = () => {
     let isValid = true;
