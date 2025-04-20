@@ -1,9 +1,7 @@
 @use "sass:map";
 @use "sass:color";
 @use "./mixins" as m;
-@use "./mixins" as *;
 @use "./variables" as v;
-// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
 @import "./icomoon.css";
 
@@ -34,7 +32,7 @@ p {
 .link {
     background: transparent;
     padding: 10px 25px;    
-    @include m.transition(all 0.5s ease);
+    @include m.transition($property: all, $duration: 0.5s, $function: ease);
     display: inline-block;
   }
 
@@ -44,8 +42,7 @@ p {
     color: map.get(v.$colors, "white");
   
     &:hover {
-    //   background-color: darken(map.get(v.$colors, "primary"), 20%);
-    background:color.adjust(map.get(v.$colors, "primary"), $lightness:20%);
+      background:color.adjust(map.get(v.$colors, "primary"), $lightness:20%);
       color: map.get(v.$colors, "white");
     }
   }
@@ -80,17 +77,17 @@ header{
     }
     .offcanvas-body{
       .nav-item{
-         @include respond-below(map.get(v.$breakpoints, "lg")){        
+         @include m.respond-below(map.get(v.$breakpoints, "lg")){        
           background:color.adjust(map.get(v.$colors, "black"), $lightness: 20%);          
           margin-bottom:10px;
          }
          .nav-link{
-          @include respond-below(map.get(v.$breakpoints, "lg")){
+          @include m.respond-below(map.get(v.$breakpoints, "lg")){
             color:map.get(v.$colors, "white");
           }
          }
          .nav-link.active{
-          @include respond-below(map.get(v.$breakpoints, "lg")){
+          @include m.respond-below(map.get(v.$breakpoints, "lg")){
             color:map.get(v.$colors, "primary");
           }
          }
@@ -119,7 +116,7 @@ main{
         font-size: clamp(1.2rem, 2.8vw, 2.8rem);
         line-height: 130%;
   
-        @include respond-below(map.get(v.$breakpoints, "md")) {
+        @include m.respond-below(map.get(v.$breakpoints, "md")) {
           line-height: 150%;
         }
   
@@ -138,10 +135,10 @@ main{
       width: 100%;
       position: relative;
   
-      @include respond-below(map.get(v.$breakpoints, "xl")) {
+      @include m.respond-below(map.get(v.$breakpoints, "xl")) {
         height: auto;
       }
-      @include respond-below(map.get(v.$breakpoints, "md")) {
+      @include m.respond-below(map.get(v.$breakpoints, "md")) {
         margin-top: 55px;
       }
       .swiper-slide {
@@ -158,7 +155,7 @@ main{
             color: map.get(v.$colors, "black");
           }
           p {
-            @include respond-below(map.get(v.$breakpoints, "sm")) {
+            @include m.respond-below(map.get(v.$breakpoints, "sm")) {
               line-height: 150%;
               font-size: 12px;
             }
@@ -175,7 +172,7 @@ main{
     width: 100%;
     padding-top: 2.5rem;
   
-    @include respond-below(map.get(v.$breakpoints, "md")) {
+    @include m.respond-below(map.get(v.$breakpoints, "md")) {
       padding-top: 0;
     }
     .highlets-col {
@@ -183,7 +180,7 @@ main{
         font-size: 15px;
         line-height: 20px;
       }
-      @include respond-below(map.get(v.$breakpoints, "lg")) {
+      @include m.respond-below(map.get(v.$breakpoints, "lg")) {
         margin-bottom: 15px;
       }
       .icon {
@@ -225,7 +222,7 @@ main{
       padding: 50px 0;
       color: map.get(v.$colors, "black");
   
-      @include respond-below(map.get(v.$breakpoints, "sm")) {
+      @include m.respond-below(map.get(v.$breakpoints, "sm")) {
         padding: 15px 0;
       }
   
@@ -246,7 +243,7 @@ main{
   .HomeProducts {
     padding: 50px 0;
   
-    @include respond-below(map.get(v.$breakpoints, "md")) {
+    @include m.respond-below(map.get(v.$breakpoints, "md")) {
       padding: 20px 0;
     }
   
@@ -259,7 +256,7 @@ main{
       border-radius: 15px;      
       background: map.get(v.$colors, "white");
       height: 410px;
-      @include respond-below(map.get(v.$breakpoints, "lg")) {
+      @include m.respond-below(map.get(v.$breakpoints, "lg")) {
         height: auto;
       }
       figure {
@@ -269,7 +266,7 @@ main{
         border: 1px solid map.get(v.$colors, "lightgray");
         height: 280px;
   
-        @include respond-below(map.get(v.$breakpoints, "lg")) {
+        @include m.respond-below(map.get(v.$breakpoints, "lg")) {
           height: auto;
         }
       }
@@ -290,7 +287,7 @@ main{
   .homeWhyChooseus {
     background: linear-gradient(90deg, #f7ffe8 0.17%, #d6f4ff 99.82%);
     padding: 50px 0;
-    @include respond-below(map.get(v.$breakpoints, "sm")) {
+    @include m.respond-below(map.get(v.$breakpoints, "sm")) {
       padding: 20px 0;
     }
     .whychooseusimg {
@@ -301,7 +298,7 @@ main{
       margin-bottom: 25px;
       position: relative;
       left: -70px;
-      @include respond-below(map.get(v.$breakpoints, "md")) {
+      @include m.respond-below(map.get(v.$breakpoints, "md")) {
         margin-bottom: 10px;
         left: 0;
       }
@@ -339,21 +336,22 @@ main{
     font-size: v.$fsize;
     position: relative;
     margin-top: 50px;
-    @include respond-below(map.get(v.$breakpoints, "md")) {
-      padding-top: 20px;
-      margin-top: 0;
-    }    
     background-image: linear-gradient(
       109.6deg,
       rgba(104, 183, 249, 0.2) 31.3%,
       rgba(176, 248, 200, 0.2) 100.2%
     );
     padding: 50px 0 0 0;  
+    @include m.respond-below(map.get(v.$breakpoints, "md")) {
+      padding-top: 20px;
+      margin-top: 0;
+    }    
+    
     .footer-col-title {
       font-size: clamp(1.1rem, 1.2vw, 1.2rem);
       padding-bottom: 15px;
   
-      @include respond-below(map.get(v.$breakpoints, "md")) {
+      @include m.respond-below(map.get(v.$breakpoints, "md")) {
         padding-bottom: 5px;
       }
     }
@@ -418,7 +416,7 @@ main{
       background-size: cover;
       padding: 100px 0;
       color: map.get(v.$colors, "white");
-      @include respond-below(map.get(v.$breakpoints, "md")) {
+      @include m.respond-below(map.get(v.$breakpoints, "md")) {
         padding: 25px 0;
       }
   
@@ -469,7 +467,7 @@ main{
       .pageContainer {
         padding: 50px 0;
   
-        @include respond-below(map.get(v.$breakpoints, "md")) {
+        @include m.respond-below(map.get(v.$breakpoints, "md")) {
           padding: 20px 0;
         }
   
@@ -487,15 +485,13 @@ main{
           list-style-position: outside;
           padding-bottom: 10px;
   
-          @include respond-below(map.get(v.$breakpoints, "md")) {
+          @include m.respond-below(map.get(v.$breakpoints, "md")) {
             padding-bottom: 5px;
           }
         }
       }
     }
   }
-
-
 
   .experience-div {
     background: map.get(v.$colors, "primary");
@@ -530,7 +526,7 @@ main{
   
   .nav-pills {
     .nav-item {
-      @include respond-below(map.get(v.$breakpoints, "sm")) {
+      @include m.respond-below(map.get(v.$breakpoints, "sm")) {
         width: 100%;
       }
     }
@@ -542,7 +538,7 @@ main{
       margin-right: 5px;
       color: map.get(v.$colors, "black");
   
-      @include respond-below(map.get(v.$breakpoints, "sm")) {
+      @include m.respond-below(map.get(v.$breakpoints, "sm")) {
         width: 100%;
         margin-bottom: 5px;
       }
@@ -567,16 +563,13 @@ main{
         border-style: dashed;
         border-bottom: 1px dashed color.adjust(map.get(v.$colors, "gray"), $lightness: 30%);
         font-size: v.$fsize - 1;
-        padding: 12px;
-  
-       
+        padding: 12px; 
       }
     }
   }
   
   .product-desc-item {   
-    margin: 0 0 35px 0;
-    
+    margin: 0 0 35px 0;    
     p {
       font-size: v.$fsize - 3 !important;
       letter-spacing: 1px;

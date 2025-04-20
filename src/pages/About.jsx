@@ -34,7 +34,7 @@ const About = () => {
 
       // Breadcrumb animation
       gsap.from('.breadcrumb-item', {
-        x: -30,
+        y: -30,
         opacity: 0,
         duration: 0.8,
         stagger: 0.2,
@@ -60,14 +60,14 @@ const About = () => {
 
       // Right side content animations
       gsap.from('.col-md-6 h2', {
-        x: 100,
+        y: 100,
         opacity: 0,
         duration: 1,
         ease: 'power3.out'
       });
 
       gsap.from('.col-md-6 h5', {
-        x: 100,
+        y: 100,
         opacity: 0,
         duration: 1,
         delay: 0.2,
@@ -83,7 +83,7 @@ const About = () => {
 
       // List items animation
       gsap.from('.list-items li', {
-        x: -50,
+        y: -50,
         opacity: 0,
         duration: 0.8,
         stagger: 0.2,
@@ -102,7 +102,6 @@ const About = () => {
           toggleActions: 'play none none reverse'
         }
       });
-
     });
 
     return (

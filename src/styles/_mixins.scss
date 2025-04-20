@@ -10,7 +10,6 @@
     margin: 0;
     padding: 0;   
     font-family: "Poppins", sans-serif; 
-    // font-family: "Noto Sans", sans-serif;    
   }
 
   @mixin transition($property: null, $duration: null, $function: null) {
@@ -23,10 +22,10 @@
 
   @mixin translate($x: 0, $y: 0) {
     transform: translate($x, $y);
-    -webkit-transform: translate($x, $y); // Safari and older browsers
-    -moz-transform: translate($x, $y); // Firefox
-    -ms-transform: translate($x, $y); // IE 9
-    -o-transform: translate($x, $y); // Opera
+    -webkit-transform: translate($x, $y); 
+    -moz-transform: translate($x, $y); 
+    -ms-transform: translate($x, $y); 
+    -o-transform: translate($x, $y); 
   }
 
   @mixin rotate($deg: 0) {
@@ -37,7 +36,7 @@
     -o-transform: rotate(#{$deg}deg);
   }
 
-  //Mixin for shadow
+
 @mixin shadow($top, $left, $blur, $color, $opacity) {
     box-shadow: $top $left $blur rgba($color, $opacity);
   }
@@ -50,23 +49,19 @@ Usage Transition
 **/
 
 
-  //Mixin for Responsive Breakpoints
 
-//Mixin for min-width and max-width
 @mixin respond-between($min, $max) {
     @media (min-width: $min) and (max-width: $max) {
       @content;
     }
   }
   
-  //Mixin for min-width
   @mixin respond-above($min) {
     @media (min-width: $min) {
       @content;
     }
   }
   
-  //Mixin for max-width
   @mixin respond-below($max) {
     @media (max-width: $max) {
       @content;
