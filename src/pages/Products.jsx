@@ -158,7 +158,9 @@ const Products = () => {
                           </tr>
                         </thead>
                         <tbody>
-                          {inStockItems.map((item, index) => (
+                          {inStockItems
+                          .sort((a, b) => a.Product.localeCompare(b.Product))
+                          .map((item, index) => (
                             <tr key={index}>
                               <td width="40%">
                                 <a 
@@ -238,7 +240,9 @@ const Products = () => {
                           </tr>
                         </thead>
                         <tbody>
-                          {underProcessing.map((item, index) => (
+                          {underProcessing
+                          .sort((a, b) => a.Product.localeCompare(b.Product))
+                          .map((item, index) => (
                             <tr key={index}>
                               <td width="40%">
                                 <a
@@ -310,5 +314,4 @@ const Products = () => {
       </div>
     )
 }
-
 export default Products
