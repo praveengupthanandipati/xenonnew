@@ -119,7 +119,7 @@ const Products = () => {
                             </thead>
                             <tbody>
                               <tr>
-                                <td>Download List of Phytochemicals Instock</td>
+                                <td>List of Phytochemicals Instock</td>
                                 <td>
                                   <NavLink 
                                     className="link-primary"
@@ -197,7 +197,7 @@ const Products = () => {
                             </thead>
                             <tbody>
                               <tr>
-                                <td>Download List of Phytochemicals Under Processing</td>
+                                <td>List of Phytochemicals Under Processing</td>
                                 <td>
                                   <NavLink 
                                     className="link-primary"
@@ -275,7 +275,7 @@ const Products = () => {
                             </thead>
                             <tbody>
                               <tr>
-                                <td>Download List of Phytochemicals</td>
+                                <td>List of Phytochemicals</td>
                                 <td>
                                   <NavLink 
                                     className="link-primary"
@@ -286,7 +286,7 @@ const Products = () => {
                                 </td>
                               </tr>
                               <tr>
-                                <td>Download List of Phytochemicals with Structure and Functional Activity</td>
+                                <td>List of Phytochemicals with Structure and Functional Activity</td>
                                 <td>
                                   <NavLink 
                                     className="link-primary"
