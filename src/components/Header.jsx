@@ -138,14 +138,23 @@ const Header = () => {
                     >
                       About
                     </Link>
-                  </li>               
+                  </li>                                    
                   <li className="nav-item">
                     <Link 
                       to="/Products" 
                       className={`nav-link ${isActive("/Products")}`}
                       onClick={handleNavLinkClick}
                     >
-                      Products
+                      Phytochemicals
+                    </Link>
+                  </li>  
+                  <li className="nav-item">
+                    <Link 
+                      to="/Ligands" 
+                      className={`nav-link ${isActive("/Ligands")}`}
+                      onClick={handleNavLinkClick}
+                    >
+                      Ligands & Catalysts
                     </Link>
                   </li>  
                   <li className="nav-item">

@@ -32,7 +32,7 @@ const Products = () => {
           <div className="subPageHeader">
             <div className="container">
               <div className="row pt-2 pt-md-5">
-                <div className="col-lg-6 col-md-10">
+                <div className="col-lg-8 col-md-10">
                   <h1 className="h1 font-bold">{pageTitle}</h1>
                   <p className="d-none d-md-block">{pageIntro}</p>
                 </div>
