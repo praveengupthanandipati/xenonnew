@@ -75,7 +75,9 @@ const Ligands = () => {
                             >
                                 {/* ligenes starts here */}
                                
-                                    {ligandsData.map((ligand) => (      
+                                    {ligandsData
+                                    .sort((a, b) => a.Product.localeCompare(b.Product))
+                                    .map((ligand) => (      
                                     <div className='row pb-3' key={ligand.id}>
                                         <div className='col-md-2'>
                                             {ligand.Image ? (
@@ -163,7 +165,9 @@ const Ligands = () => {
                                 aria-labelledby="pills-Catalysts-tab"
                                 >
                                  {/* Catalysts starts here */}
-                                   {catalystsData.map((catalystItem) => (      
+                                   {catalystsData
+                                   .sort((a, b) => a.product.localeCompare(b.product))
+                                   .map((catalystItem) => (      
                                     <div className='row pb-3' key={catalystItem.id}>
                                         <div className='col-md-2'>
                                             {catalystItem.image ? (
