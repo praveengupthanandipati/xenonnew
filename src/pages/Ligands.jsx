@@ -73,7 +73,7 @@ const Ligands = () => {
                                 role="tabpanel"
                                 aria-labelledby="pills-Ligands-tab"
                             >
-                                {/* ligenes starts here */}
+                                    {/* ligenes starts here */}
                                
                                     {ligandsData
                                     .sort((a, b) => a.Product.localeCompare(b.Product))
@@ -95,7 +95,7 @@ const Ligands = () => {
                                             )}
                                         </div>
                                         <div className='col-md-10'>
-                                            <h3 className='h5 font-semibold pb-3'>{ligand.Product}</h3>
+                                            <h3 className='h5 font-semibold pb-3 pt-2 pt-md-0'>{ligand.Product}</h3>
                                             <div className='row'>
                                                  <div className='col-md-6'>
                                                        <div className="product-desc-item">
@@ -104,49 +104,49 @@ const Ligands = () => {
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">CAS Number:</p>
                                                             <h6 className="h6">{ligand?.CASNumber || "--"}</h6>
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Molecular Formula:</p>
                                                             <h6 className="h6">{ligand?.MolecularFormula || "--"}</h6>
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Molecular Weight:</p>
                                                             <h6 className="h6">{ligand?.MolecularWeight || "--"}</h6>
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Purity:</p>
                                                             <h6 className="h6">{ligand?.Purity || "--"}</h6>
                                                         </div>
                                                  </div>
 
-                                                 <div className='col-md-3'>
+                                                 <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Specific Rotation:</p>
                                                             <h6 className="h6">{ligand?.SpecificRotation_aD20 || "--"}</h6>
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Melting Point:</p>
                                                             <h6 className="h6">{ligand?.MeltingPoint || "--"}</h6>
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Inventory Status:</p>
                                                             <h6 className="h6">{ligand?.InventoryStatus || "--"}</h6>
@@ -164,7 +164,7 @@ const Ligands = () => {
                                 role="tabpanel"
                                 aria-labelledby="pills-Catalysts-tab"
                                 >
-                                 {/* Catalysts starts here */}
+                                   {/* Catalysts starts here */}
                                    {catalystsData
                                    .sort((a, b) => a.product.localeCompare(b.product))
                                    .map((catalystItem) => (      
@@ -185,7 +185,7 @@ const Ligands = () => {
                                             )}
                                         </div>
                                         <div className='col-md-10'>
-                                            <h3 className='h5 font-semibold pb-3'>{catalystItem.product}</h3>
+                                            <h3 className='h5 font-semibold pb-3 pt-2 pt-md-0'>{catalystItem.product}</h3>
                                             <div className='row'>
                                                  <div className='col-md-6'>
                                                        <div className="product-desc-item">
@@ -194,56 +194,56 @@ const Ligands = () => {
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">CAS Number:</p>
                                                             <h6 className="h6">{catalystItem?.casNumber || "--"}</h6>
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Molecular Formula:</p>
                                                             <h6 className="h6">{catalystItem?.molecularFormula || "--"}</h6>
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Molecular Weight:</p>
                                                             <h6 className="h6">{catalystItem?.molecularWeight || "--"}</h6>
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Appearance:</p>
                                                             <h6 className="h6">{catalystItem?.appearance || "--"}</h6>
                                                         </div>
                                                  </div>
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Purity:</p>
                                                             <h6 className="h6">{catalystItem?.purity || "--"}</h6>
                                                         </div>
                                                  </div> 
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Specific Rotation:</p>
                                                             <h6 className="h6">{catalystItem?.specificRotation || "--"}</h6>
                                                         </div>
                                                  </div> 
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Melting Point:</p>
                                                             <h6 className="h6">{catalystItem?.meltingPoint || "--"}</h6>
                                                         </div>
                                                  </div> 
 
-                                                  <div className='col-md-3'>
+                                                  <div className='col-md-3 col-6'>
                                                        <div className="product-desc-item">
                                                             <p className="text-uppercase font-bold position-relative">Inventory Status:</p>
                                                             <h6 className="h6">{catalystItem?.inventoryStatus || "--"}</h6>
