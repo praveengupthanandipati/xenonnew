@@ -1,5 +1,8 @@
 import React from 'react'
 import { NavLink, useNavigate, Link } from 'react-router-dom';
+import ligandsData from "../data/Ligands";
+import catalystsData from "../data/Catalysts";
+import noimage from "../assets/images/noimage.jpg";
 
 const Ligands = () => {
     const pageTitle = "Ligands and Catalysts";
@@ -70,11 +73,88 @@ const Ligands = () => {
                                 role="tabpanel"
                                 aria-labelledby="pills-Ligands-tab"
                             >
-                                {/* table responsive starts here */}
-                                <div className="table-responsive">
-                                    <p>Ligands</p>
-                                </div>
-                                {/* table resposive ends*/}
+                                {/* ligenes starts here */}
+                               
+                                    {ligandsData.map((ligand) => (      
+                                    <div className='row pb-3' key={ligand.id}>
+                                        <div className='col-md-2'>
+                                            {ligand.Image ? (
+                                                <img
+                                                    src={ligand.Image}
+                                                    className="img-fluid"
+                                                    alt="Product"
+                                                />
+                                                ) : (
+                                                <img
+                                                    src={noimage}
+                                                    className="img-fluid"
+                                                    alt="No Image Found"
+                                                />
+                                            )}
+                                        </div>
+                                        <div className='col-md-10'>
+                                            <h3 className='h5 font-semibold pb-3'>{ligand.Product}</h3>
+                                            <div className='row'>
+                                                 <div className='col-md-6'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">IUPAC Name</p>
+                                                            <h6 className="h6">{ligand?.IUPACName || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">CAS Number:</p>
+                                                            <h6 className="h6">{ligand?.CASNumber || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Molecular Formula:</p>
+                                                            <h6 className="h6">{ligand?.MolecularFormula || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Molecular Weight:</p>
+                                                            <h6 className="h6">{ligand?.MolecularWeight || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Purity:</p>
+                                                            <h6 className="h6">{ligand?.Purity || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                 <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Specific Rotation:</p>
+                                                            <h6 className="h6">{ligand?.SpecificRotation_aD20 || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Melting Point:</p>
+                                                            <h6 className="h6">{ligand?.MeltingPoint || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Inventory Status:</p>
+                                                            <h6 className="h6">{ligand?.InventoryStatus || "--"}</h6>
+                                                        </div>
+                                                 </div>                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}                               
+                                {/* ligenes ends*/}
                             </div>
                             <div
                                 className="tab-pane fade"
@@ -82,11 +162,94 @@ const Ligands = () => {
                                 role="tabpanel"
                                 aria-labelledby="pills-Catalysts-tab"
                                 >
-                                 {/* table responsive starts here */}
-                                 <div className="table-responsive">
-                                    <p>Catalysts</p>
-                                </div>
-                                {/* table resposive ends*/}                            
+                                 {/* Catalysts starts here */}
+                                   {catalystsData.map((catalystItem) => (      
+                                    <div className='row pb-3' key={catalystItem.id}>
+                                        <div className='col-md-2'>
+                                            {catalystItem.image ? (
+                                                <img
+                                                    src={catalystItem.image}
+                                                    className="img-fluid"
+                                                    alt="Product"
+                                                />
+                                                ) : (
+                                                <img
+                                                    src={noimage}
+                                                    className="img-fluid"
+                                                    alt="No Image Found"
+                                                />
+                                            )}
+                                        </div>
+                                        <div className='col-md-10'>
+                                            <h3 className='h5 font-semibold pb-3'>{catalystItem.product}</h3>
+                                            <div className='row'>
+                                                 <div className='col-md-6'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">IUPAC Name</p>
+                                                            <h6 className="h6">{catalystItem?.iupacName || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">CAS Number:</p>
+                                                            <h6 className="h6">{catalystItem?.casNumber || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Molecular Formula:</p>
+                                                            <h6 className="h6">{catalystItem?.molecularFormula || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Molecular Weight:</p>
+                                                            <h6 className="h6">{catalystItem?.molecularWeight || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Appearance:</p>
+                                                            <h6 className="h6">{catalystItem?.appearance || "--"}</h6>
+                                                        </div>
+                                                 </div>
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Purity:</p>
+                                                            <h6 className="h6">{catalystItem?.purity || "--"}</h6>
+                                                        </div>
+                                                 </div> 
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Specific Rotation:</p>
+                                                            <h6 className="h6">{catalystItem?.specificRotation || "--"}</h6>
+                                                        </div>
+                                                 </div> 
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Melting Point:</p>
+                                                            <h6 className="h6">{catalystItem?.meltingPoint || "--"}</h6>
+                                                        </div>
+                                                 </div> 
+
+                                                  <div className='col-md-3'>
+                                                       <div className="product-desc-item">
+                                                            <p className="text-uppercase font-bold position-relative">Inventory Status:</p>
+                                                            <h6 className="h6">{catalystItem?.inventoryStatus || "--"}</h6>
+                                                        </div>
+                                                 </div>                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}        
+                                {/* Catalysts ends*/}                            
                             </div>                              
                         </div>
                     </div>
