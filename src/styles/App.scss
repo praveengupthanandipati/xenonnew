@@ -635,3 +635,17 @@ main{
       color: map.get(v.$colors, "white");
     }
   }
+
+  .pagination{
+    .page-link{
+      color:map.get(v.$colors, "primary");
+    }
+    .active{
+      .page-link {
+      background:map.get(v.$colors, "primary");
+      color:map.get(v.$colors, "black");
+      border-color:map.get(v.$colors, "primary");
+    }
+  }
+   
+  }
