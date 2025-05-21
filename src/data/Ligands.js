@@ -1,7 +1,9 @@
+import React from "react";
+
 const ligands = [
   {
     id: 1,
-    Image: null,
+    Image:"/products/Ligands/(R,R)Jacobsenssalenligand.png",
     Product: "(R, R) Jacobsen's salen ligand",
     IUPACName: "(R,R)-(-)-N,N-Bis(3,5-di-tert-butylsalicylidene)-1,2-cyclohexanediamine",
     CASNumber: "135616-40-9",
@@ -15,7 +17,7 @@ const ligands = [
   },
   {
     id: 2,
-    Image: null,
+    Image:"/products/Ligands/(S,S)Jacobsenssalenligand.png",
     Product: "(S, S) Jacobsen's salen ligand",
     IUPACName: "(S,S)-(-)-N,N-Bis(3,5-di-tert-butylsalicylidene)-1,2-cyclohexanediamine",
     CASNumber: "135616-36-3",
@@ -29,7 +31,7 @@ const ligands = [
   },
   {
     id: 3,
-    Image: null,
+    Image:"/products/Ligands/(R,R)-3,5-DTBS-1,2-DPEN.png",
     Product: "(R,R)-3,5-DTBS-1,2-DPEN",
     IUPACName: null,
     CASNumber: null,
@@ -43,7 +45,7 @@ const ligands = [
   },
   {
     id: 4,
-    Image: null,
+    Image:"/products/Ligands/(S,S)-3,5-DTBS-1,2-DPEN.png",
     Product: "(S,S)-3,5-DTBS-1,2-DPEN",
     IUPACName: null,
     CASNumber: null,
@@ -57,7 +59,7 @@ const ligands = [
   },
   {
     id: 5,
-    Image: null,
+    Image:"/products/Ligands/3,5-Di-tert-butylsalicylaldehyde.png",
     Product: "3, 5-Di-tert-butyl salicylaldehyde",
     IUPACName: "3,5-Di-tert-butyl-2-hydroxy benzaldehyde",
     CASNumber: "37942-07-7",
@@ -71,7 +73,7 @@ const ligands = [
   },
   {
     id: 6,
-    Image: null,
+    Image:"/products/Ligands/(+)-1,2-DACH-Tartratesalt.png",
     Product: "(+)-1,2-DACH-Tartrate salt",
     IUPACName: "(1R, 2R)- (+)-1, 2-Diaminocyclohexane L-tartrate",
     CASNumber: "39961-95-0",
@@ -85,7 +87,7 @@ const ligands = [
   },
   {
     id: 7,
-    Image: null,
+    Image:"/products/Ligands/(-)-1,2-DACH-Tartratesalt.png",
     Product: "(-)-1,2-DACH-Tartrate salt",
     IUPACName: "(1S, 2S)- (-)-1, 2-Diaminocyclohexane D-tartrate",
     CASNumber: "67333-70-4",
@@ -99,7 +101,7 @@ const ligands = [
   },
   {
     id: 8,
-    Image: null,
+    Image:"/products/Ligands/DPEN.png",
     Product: "( ± ) DPEN",
     IUPACName: "(±)-1,2-Diphenylethylenediamine",
     CASNumber: "5700-60-7",
@@ -113,7 +115,7 @@ const ligands = [
   },
   {
     id: 9,
-    Image: null,
+    Image:"/products/Ligands/(R,R)-DPEN.png",
     Product: "(R,R)-DPEN",
     IUPACName: "(1R,2R)-(+)-1,2-Diphenylethylenediamine",
     CASNumber: "35132-20-8",
@@ -127,7 +129,7 @@ const ligands = [
   },
   {
     id: 10,
-    Image: null,
+    Image:"/products/Ligands/(S,S)-DPEN.png",
     Product: "(S,S)-DPEN",
     IUPACName: "(1S,2S)-(-)-1,2-Diphenylethylenediamine",
     CASNumber: "29841-69-8",
@@ -141,7 +143,7 @@ const ligands = [
   },
   {
     id: 11,
-    Image: null,
+    Image:"/products/Ligands/(R,R)-TsDPEN.png",
     Product: "(R,R)-Ts DPEN",
     IUPACName: "(1R,2R)-(-)-N-(4-Toluenesulfonyl)-1,2-diphenylethylenediamine",
     CASNumber: "144222-34-4",
@@ -155,7 +157,7 @@ const ligands = [
   },
   {
     id: 12,
-    Image: null,
+    Image:"/products/Ligands/(S,S)-TsDPEN.png",
     Product: "(S,S)-Ts DPEN",
     IUPACName: "(1S,2S)-(+)-N-(4-Toluenesulfonyl)-1,2-diphenylethylenediamine",
     CASNumber: "167316-27-0",
@@ -169,7 +171,7 @@ const ligands = [
   },
   {
     id: 13,
-    Image: null,
+    Image:"/products/Ligands/(R,R)-MsDPEN.png",
     Product: "(R,R)-Ms DPEN",
     IUPACName: "(1R,2R)-(+)-N-(Methanesulfonyl)-1,2-diphenylethylenediamine",
     CASNumber: "511534-44-4",
@@ -183,7 +185,7 @@ const ligands = [
   },
   {
     id: 14,
-    Image: null,
+    Image:"/products/Ligands/(S,S)-MsDPEN.png",
     Product: "(S,S)-Ms DPEN",
     IUPACName: "(1S,2S)-(-)-N-(Methanesulfonyl)-1,2-diphenylethylenediamine",
     CASNumber: "300345-76-0",
@@ -197,7 +199,7 @@ const ligands = [
   },
   {
     id: 15,
-    Image: null,
+    Image:"/products/Ligands/(R,R)-TsDACH.png",
     Product: "(R,R)-Ts DACH",
     IUPACName: "(1R,2R)-(+)-N-(4-Toluenesulfonyl)-1,2-diaminocyclohexane",
     CASNumber: "174291-96-4",
@@ -211,7 +213,7 @@ const ligands = [
   },
   {
     id: 16,
-    Image: null,
+    Image:"/products/Ligands/(S,S)-TsDACH.png",
     Product: "(S,S)-Ts DACH",
     IUPACName: "(1S,2S)-(-)-N-(4-Toluenesulfonyl)-1,2-diaminocyclohexane",
     CASNumber: "174291-97-5",
@@ -225,7 +227,7 @@ const ligands = [
   },
   {
     id: 17,
-    Image: null,
+     Image:"/products/Ligands/(R,R)-BissDPEN.png",
     Product: "(R, R)-BisTsDPEN",
     IUPACName: "(1R,2R)-N,N'-Di-p-toluenesulfonyl-1,2-diphenylethylenediamine",
     CASNumber: "121758-19-8",
@@ -239,7 +241,7 @@ const ligands = [
   },
   {
     id: 18,
-    Image: null,
+   Image:"/products/Ligands/(S,S)-BisTsDPEN.png",
     Product: "(S, S)-BisTsDPEN",
     IUPACName: "(1S,2S)-N,N'-Di-p-toluenesulfonyl-1,2-diphenylethylenediamine",
     CASNumber: "170709-41-8",
@@ -253,7 +255,7 @@ const ligands = [
   },
   {
     id: 19,
-    Image: null,
+    Image:"/products/Ligands/(R,R)-BisMsDPEN.png",
     Product: "(R, R)-BisMsDPEN",
     IUPACName: "(1R,2R)-N,N'-Di-methanesulfonyl-1,2-diphenylethylenediamine",
     CASNumber: null,
@@ -267,7 +269,7 @@ const ligands = [
   },
   {
     id: 20,
-    Image: null,
+    Image:"/products/Ligands/(S,S)-BisMsDPEN.png",
     Product: "(S, S)-BisMsDPEN",
     IUPACName: "(1S,2S)-N,N'-Di-methanesulfonyl-1,2-diphenylethylenediamine",
     CASNumber: null,
@@ -281,7 +283,7 @@ const ligands = [
   },
   {
     id: 21,
-    Image: null,
+    Image:"/products/Ligands/(R,R)-BisTsDACH.png",
     Product: "(R,R)-BisTsDACH",
     IUPACName: "(1R,2R)-N,N'-Di-p-toluenesulfonyl-1,2-diaminocyclohexane",
     CASNumber: "143585-47-1",
@@ -295,7 +297,7 @@ const ligands = [
   },
   {
     id: 22,
-    Image: null,
+    Image:"/products/Ligands/(S,S)-BisTsDACH.png",
     Product: "(S, S)-BisTsDACH",
     IUPACName: "(1S,2S)-N,N'-Di-p-toluenesulfonyl-1,2-diaminocyclohexane",
     CASNumber: "212555-28-7",
