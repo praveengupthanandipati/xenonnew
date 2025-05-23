@@ -328,9 +328,9 @@ const Ligands = () => {
                     .map((catalystItem) => (
                       <div className="row pb-3" key={catalystItem.id}>
                         <div className="col-md-2">
-                          {catalystItem.image ? (
+                          {catalystItem.Image ? (
                             <img
-                              src={catalystItem.image}
+                              src={catalystItem.Image}
                               className="img-fluid"
                               alt="Product"
                             />

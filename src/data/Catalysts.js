@@ -1,7 +1,7 @@
 const catalysts = [
   {
     id: 1,
-    image: null,
+    Image:"/products/Catalysts/(R,R)-Jacobsenssalen(Al)catalyst.png",
     product: "(R,R)-Jacobsen's salen(Al) catalyst",
     iupacName: "(1R,2R)-(-)-[1,2-Cyclohexanediamino-N,N'-bis-(3,5-di-t-butylsalicylidene)]aluminum(III) chloride",
     casNumber: "250611-13-3",
@@ -15,7 +15,7 @@ const catalysts = [
   },
   {
     id: 2,
-    image: null,
+     Image:"/products/Catalysts/(S,S)-Jacobsenssalen(Al)catalyst.png",
     product: "(S,S)-Jacobsen's salen(Al) catalyst",
     iupacName: "(1S,2S)-(+)-[1,2-Cyclohexanediamino-N,N'-bis-(3,5-di-t-butylsalicylidene)]aluminum(III) chloride",
     casNumber: "307926-51-8",
@@ -29,7 +29,7 @@ const catalysts = [
   },
   {
     id: 3,
-    image: null,
+    Image:"/products/Catalysts/(R,R)-Jacobsenssalen(Co)catalyst.png",
     product: "(R,R)-Jacobsen's salen(Co) catalyst",
     iupacName: "(1R,2R)-(-)-[1,2-Cyclohexanediamino-N,N'-bis-(3,5-di-t-butylsalicylidene)]cobalt(II)",
     casNumber: "176763-62-5",
@@ -43,7 +43,7 @@ const catalysts = [
   },
   {
     id: 4,
-    image: null,
+    Image:"/products/Catalysts/(S,S)-Jacobsenssalen(Co)catalyst.png",
     product: "(S,S)-Jacobsen's salen(Co) catalyst",
     iupacName: "(1S,2S)-(+)-[1,2-Cyclohexanediamino-N,N'-bis-(3,5-di-t-butylsalicylidene)]cobalt(II)",
     casNumber: "188264-84-8",
@@ -57,7 +57,7 @@ const catalysts = [
   },
   {
     id: 5,
-    image: null,
+    Image:"/products/Catalysts/(R,R)-Jacobsenssalen(Mn)catalyst.png",
     product: "(R,R)-Jacobsen's salen(Mn) catalyst",
     iupacName: "(1R,2R)-(-)-[1,2-Cyclohexanediamino-N,N'-bis-(3,5-di-t-butylsalicylidene)] manganese(III)chloride",
     casNumber: "138124-32-0",
@@ -71,7 +71,7 @@ const catalysts = [
   },
   {
     id: 6,
-    image: null,
+    Image:"/products/Catalysts/(S,S)-Jacobsenssalen(Mn)catalyst.png",
     product: "(S,S)-Jacobsen's salen(Mn) catalyst",
     iupacName: "(1S,2S)-(+)-[1,2-Cyclohexanediamino-N,N'-bis-(3,5-di-t-butylsalicylidene)]manganese(III)chloride",
     casNumber: "135620-04-1",
@@ -85,7 +85,7 @@ const catalysts = [
   },
   {
     id: 7,
-    image: null,
+    Image:"/products/Catalysts/[RuCl2(p-cymene)]2.png",
     product: "[RuCl2(p-cymene)]2",
     iupacName: "Dichloro(p-cymene)ruthenium(II)dimer",
     casNumber: "52462-29-0",
@@ -99,7 +99,7 @@ const catalysts = [
   },
   {
     id: 8,
-    image: null,
+    Image:"/products/Catalysts/[RuCl2(mesitylene)]2.png",
     product: "[RuCl2(mesitylene)]2",
     iupacName: "Dichloro(mesitylene)ruthenium(II)dimer",
     casNumber: "52462-31-4",
@@ -113,7 +113,7 @@ const catalysts = [
   },
   {
     id: 9,
-    image: null,
+    Image:"/products/Catalysts/[RuCl2(benzene)]2.png",
     product: "[RuCl2(benzene)]2",
     iupacName: "Dichloro(benzene)ruthenium(II)dimer",
     casNumber: "37366-09-9",
@@ -127,7 +127,7 @@ const catalysts = [
   },
   {
     id: 10,
-    image: null,
+    Image:"/products/Catalysts/[RuI2(p-cymene)]2.png",
     product: "[RuI2(p-cymene)]2",
     iupacName: "DiIodo(p-cymene)ruthenium(II)dimer",
     casNumber: "90614-07-6",
@@ -141,7 +141,7 @@ const catalysts = [
   },
   {
     id: 11,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(R,R)-TsDPEN](benzene).png",
     product: "RuCl[(R,R)-Ts DPEN](benzene)",
     iupacName: "Chloro(benzene)[(1R,2R)-N-(p-toluenesulfonyl)-1,2-diphenylethylenediamine]ruthenium (II)",
     casNumber: null,
@@ -155,7 +155,7 @@ const catalysts = [
   },
   {
     id: 12,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(S,S)-TsDPEN](benzene).png",
     product: "RuCl[(S,S)-Ts DPEN](benzene)",
     iupacName: "Chloro(benzene)[(1S,2S)-N-(p-toluenesulfonyl)-1,2-diphenylethylenediamine]ruthenium (II)",
     casNumber: null,
@@ -169,7 +169,7 @@ const catalysts = [
   },
   {
     id: 13,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(R,R)-TsDPEN](p-cymene).png",
     product: "RuCl[(R,R)-Ts DPEN](p-cymene)",
     iupacName: "Chloro(p-cymene)[(1R,2R)-N-(p-toluenesulfonyl)-1,2-diphenylethylenediamine]ruthenium (II)",
     casNumber: "192139-92-7",
@@ -183,7 +183,7 @@ const catalysts = [
   },
   {
     id: 14,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(S,S)-TsDPEN](p-cymene).png",
     product: "RuCl[(S,S)-Ts DPEN](p-cymene)",
     iupacName: "Chloro(p-cymene)[(1S,2S)-N-(p-toluenesulfonyl)-1,2-diphenylethylenediamine]ruthenium (II)",
     casNumber: "192139-90-5",
@@ -197,7 +197,7 @@ const catalysts = [
   },
   {
     id: 15,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(R,R)-TsDPEN](mesitylene).png",
     product: "RuCl[(R,R)-Ts DPEN](mesitylene)",
     iupacName: "Chloro(mesitylene)[(1R,2R)-N-(p-toluenesulfonyl)-1,2-diphenylethylenediamine]ruthenium (II)",
     casNumber: "174813-82-2",
@@ -211,7 +211,7 @@ const catalysts = [
   },
   {
     id: 16,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(S,S)-TsDPEN](mesitylene).png",
     product: "RuCl[(S,S)-Ts DPEN](mesitylene)",
     iupacName: "Chloro(mesitylene)[(1S,2S)-N-(p-toluenesulfonyl)-1,2-diphenylethylenediamine]ruthenium (II)",
     casNumber: "174813-81-1",
@@ -225,7 +225,7 @@ const catalysts = [
   },
   {
     id: 17,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(R,R)-MsDPEN](p-cymene).png",
     product: "RuCl[(R,R)-Ms DPEN](p-cymene)",
     iupacName: "Chloro(p-cymene)[(1R,2R)-N-(methanesulfonyl)-1,2-diphenylethylenediamine]ruthenium (II)",
     casNumber: "1097730-68-6",
@@ -239,7 +239,7 @@ const catalysts = [
   },
   {
     id: 18,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(S,S)-MsDPEN](p-cymene).png",
     product: "RuCl[(S,S)-Ms DPEN](p-cymene)",
     iupacName: "Chloro(p-cymene)[(1S,2S)-N-(methanesulfonyl)-1,2-diphenylethylenediamine]ruthenium (II)",
     casNumber: "329371-25-7",
@@ -253,7 +253,7 @@ const catalysts = [
   },
   {
     id: 19,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(R,R)-MsDPEN](mesitylene).png",
     product: "RuCl[(R,R)-Ms DPEN](mesitylene)",
     iupacName: "Chloro(mesitylene)[(1R,2R)-N-(methanesulfonyl)-1,2-diphenylethylenediamine]ruthenium (II)",
     casNumber: "1160707-20-9",
@@ -267,7 +267,7 @@ const catalysts = [
   },
   {
     id: 20,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(S,S)-MsDPEN](mesitylene).png",
     product: "RuCl[(S,S)-Ms DPEN](mesitylene)",
     iupacName: "Chloro(mesitylene)[(1S,2S)-N-(methanesulfonyl)-1,2-diphenylethylenediamine]ruthenium (II)",
     casNumber: "865488-44-4",
@@ -281,7 +281,7 @@ const catalysts = [
   },
   {
     id: 21,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(R,R)-FsDPEN](p-cymene).png",
     product: "RuCl[(R,R)-Fs DPEN](p-cymene)",
     iupacName: "Chloro(p-cymene)[(1R,2R)-N-(pentafluorobenzenesulfonyl)-1,2-diphenyl ethylenediamine]ruthenium (II)",
     casNumber: "1026995-71-0",
@@ -295,7 +295,7 @@ const catalysts = [
   },
   {
     id: 22,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(S,S)-FsDPEN](p-cymene).png",
     product: "RuCl[(S,S)-Fs DPEN](p-cymene)",
     iupacName: "Chloro(p-cymene)[(1S,2S)-N-(pentafluorobenzenesulfonyl)-1,2-diphenyl ethylenediamine]ruthenium (II)",
     casNumber: "1026995-72-1",
@@ -309,7 +309,7 @@ const catalysts = [
   },
   {
     id: 23,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(R,R)-TsDACH](p-cymene).png",
     product: "RuCl[(R,R)-Ts DACH](p-cymene)",
     iupacName: "Chloro(p-cymene)[(1R,2R)-N-(p-toluenesulfonyl)-1,2-diaminocyclohexane]ruthenium (II)",
     casNumber: "213603-12-4",
@@ -323,7 +323,7 @@ const catalysts = [
   },
   {
     id: 24,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(S,S)-TsDACH](p-cymene).png",
     product: "RuCl[(S,S)-Ts DACH](p-cymene)",
     iupacName: "Chloro(p-cymene)[(1S,2S)-N-(p-toluenesulfonyl)-1,2-diaminocyclohexane]ruthenium (II)",
     casNumber: "192057-12-8",
@@ -337,7 +337,7 @@ const catalysts = [
   },
   {
     id: 25,
-    image: null,
+    Image:"/products/Catalysts/RuCl[(R,R)-TsDACH](mesitylene).png",
     product: "RuCl[(R,R)-Ts DACH](mesitylene)",
     iupacName: "Chloro(mesitylene)[(1R,2R)-N-(p-toluenesulfonyl)-1,2-diaminocyclohexane]ruthenium (II)",
     casNumber: null,
@@ -351,7 +351,7 @@ const catalysts = [
   },
   {
     id: 26,
-    image: null,
+    Image:null,
     product: "RuCl[(S,S)-Ts DACH](mesitylene)",
     iupacName: "Chloro(mesitylene)[(1S,2S)-N-(p-toluenesulfonyl)-1,2-diaminocyclohexane]ruthenium (II)",
     casNumber: null,
@@ -365,7 +365,7 @@ const catalysts = [
   },
   {
     id: 27,
-    image: null,
+    Image:"/products/Catalysts/Ru[(R,R)-TsDPEN](p-cymene).png",
     product: "Ru [(R,R)-Ts DPEN](p-cymene)",
     iupacName: "[(1R,2R)-N-(p-toluenesulfonyl)-1,2-diphenylethylenediamine](p-cymene) ruthenium (II)",
     casNumber: "1095282-32-8",
@@ -379,7 +379,7 @@ const catalysts = [
   },
   {
     id: 28,
-    image: null,
+    Image:"/products/Catalysts/Ru[(S,S)-TsDPEN](p-cymene).png",
     product: "Ru [(S,S)-Ts DPEN](p-cymene)",
     iupacName: "[(1S,2S)-N-(p-toluenesulfonyl)-1,2-diphenylethylenediamine](p-cymene) ruthenium (II)",
     casNumber: "192139-91-6",
@@ -393,7 +393,7 @@ const catalysts = [
   },
   {
     id: 29,
-    image: null,
+    Image:"/products/Catalysts/Ru[(R,R)-MsDPEN](p-cymene).png",
     product: "Ru [(R,R)-Ms DPEN](p-cymene)",
     iupacName: "[(1R,2R)-N-(Methanesulfonyl)-1,2-diphenylethylenediamine](p-cymene) ruthenium (II)",
     casNumber: "1354725-73-7",
@@ -407,7 +407,7 @@ const catalysts = [
   },
   {
     id: 30,
-    image: null,
+    Image:"/products/Catalysts/Ru[(S,S)-MsDPEN](p-cymene).png",
     product: "Ru [(S,S)-Ms DPEN](p-cymene)",
     iupacName: "[(1S,2S)-N-(Methanesulfonyl)-1,2-diphenylethylenediamine](p-cymene) ruthenium (II)",
     casNumber: "1354723-72-0",
@@ -421,7 +421,7 @@ const catalysts = [
   },
   {
     id: 31,
-    image: null,
+    Image:"/products/Catalysts/Ru(OTf)[(R,R)-TsDPEN](p-cymene).png",
     product: "Ru(OTf) [(R,R)-Ts DPEN](p-cymene)",
     iupacName: "[(1R,2R)-N-(p-toluenesulfonyl)-1,2-diphenylethylenediamine](p-cymene) ruthenium (II) triflate",
     casNumber: "1095282-31-7",
@@ -435,10 +435,10 @@ const catalysts = [
   },
   {
     id: 32,
-    image: null,
+    Image:"/products/Catalysts/Ru(OTf)-[(S,S)-TsDPEN](p-cymene).png",
     product: "Ru(OTf) [(S,S)-Ts DPEN](p-cymene)",
     iupacName: "[(1S,2S)-N-(p-toluenesulfonyl)-1,2-diphenylethylenediamine](p-cymene) ruthenium (II) triflate",
-    casNumber: null,
+    casNumber: "905817-09-6",
     molecularFormula: "C32H35F3N2O5RuS2",
     molecularWeight: 749.83,
     appearance: "Light brown color powder",
@@ -449,7 +449,7 @@ const catalysts = [
   },
   {
     id: 33,
-    image: null,
+    Image:"/products/Catalysts/Ru(OTf)[(R,R)-MsDPEN](p-cymene).png",
     product: "Ru(OTf) [(R,R)-Ms DPEN](p-cymene)",
     iupacName: "[(1R,2R)-N-(Methanesulfonyl)-1,2-diphenylethylenediamine](p-cymene) ruthenium (II) triflate",
     casNumber: null,
@@ -463,7 +463,7 @@ const catalysts = [
   },
   {
     id: 34,
-    image: null,
+    Image:"/products/Catalysts/Ru(OTf)-[(S,S)-MsDPEN](p-cymene).png",
     product: "Ru(OTf) [(S,S)-Ms DPEN](p-cymene)",
     iupacName: "[(1S,2S)-N-(Methanesulfonyl)-1,2-diphenylethylenediamine](p-cymene) ruthenium (II) triflate",
     casNumber: null,
@@ -477,7 +477,7 @@ const catalysts = [
   },
   {
     id: 35,
-    image: null,
+    Image:"/products/Catalysts/[RuCl(p-cymene)((R)-BINAP)]Cl.png",
     product: "[RuCl(p-cymene)((R)-BINAP)]Cl",
     iupacName: "Chloro[(R)-(+)-2,2'-bis(diphenylphosphino)-1,1'-binaphthyl](p-cymene)ruthenium(II)chloride",
     casNumber: "145926-28-9",
@@ -491,7 +491,7 @@ const catalysts = [
   },
   {
     id: 36,
-    image: null,
+    Image:"/products/Catalysts/[RuCl(p-cymene)((S)-BINAP)]Cl.png",
     product: "[RuCl(p-cymene)((S)-BINAP)]Cl",
     iupacName: "Chloro[(S)-(-)-2,2'-bis(diphenylphosphino)-1,1'-binaphthyl](p-cymene)ruthenium(II)chloride",
     casNumber: "130004-33-0",
@@ -505,7 +505,7 @@ const catalysts = [
   },
   {
     id: 37,
-    image: null,
+    Image:"/products/Catalysts/[RuCl(benzene)((R)-BINAP)]Cl.png",
     product: "[RuCl(benzene)((R)-BINAP)]Cl",
     iupacName: "Chloro[(R)-(+)-2,2'-bis(diphenylphosphino)-1,1'-binaphthyl](benzene)ruthenium(II)chloride",
     casNumber: "124069-39-2",
@@ -519,7 +519,7 @@ const catalysts = [
   },
   {
     id: 38,
-    image: null,
+    Image:null,
     product: "[RuCl(benzene)((S)-BINAP)]Cl",
     iupacName: "Chloro[(S)-(-)-2,2'-bis(diphenylphosphino)-1,1'-binaphthyl](benzene)ruthenium(II)chloride",
     casNumber: "126251-92-1",
